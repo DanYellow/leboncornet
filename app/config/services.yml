@@ -4,6 +4,14 @@ parameters:
 #    parameter_name: value
 
 services:
+  resource.user:
+    parent:    "api.resource"
+    arguments: [ "Backend\\AdminBundle\\Entity\\User" ]
+    tags:      [ { name: "api.resource" } ]
+  resource.classifiedadvertisement:
+    parent:    "api.resource"
+    arguments: [ "Backend\\AdminBundle\\Entity\\ClassifiedAdvertisement" ]
+    tags:      [ { name: "api.resource" } ]
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
