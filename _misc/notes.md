@@ -12,4 +12,13 @@ Update entity :
 php app/console doctrine:generate:entities BackendAdminBundle:User
 
 Create entity : 
-php bin/console doctrine:generate:entity
+php app/console doctrine:generate:entity
+
+
+## MySQL Commands
+
+SHOW COLUMNS FROM user
+USE Databasename
+
+
+RSA key : cornet

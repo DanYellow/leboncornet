@@ -23,7 +23,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "dunglas/api-bundle": "^1.1",
-        "nelmio/api-doc-bundle": "^2.13"
+        "nelmio/api-doc-bundle": "^2.13",
+        "vich/uploader-bundle": "^1.2",
+        "lexik/jwt-authentication-bundle": "^1.6"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

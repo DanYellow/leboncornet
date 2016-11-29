@@ -5,13 +5,17 @@ namespace Backend\AdminBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
+use Backend\AdminBundle\Entity\ClassifiedAdvertisement as ClassifiedAdvertisement;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="Backend\AdminBundle\Repository\UserRepository")
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var int
@@ -20,7 +24,7 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -35,13 +39,6 @@ class User
      * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
      */
     private $firstname;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="pseudo", type="string", length=25, nullable=true)
-     */
-    private $pseudo;
 
 
     /**

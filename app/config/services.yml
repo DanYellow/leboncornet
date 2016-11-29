@@ -7,11 +7,21 @@ services:
   resource.user:
     parent:    "api.resource"
     arguments: [ "Backend\\AdminBundle\\Entity\\User" ]
+    calls:
+      -      method:    "initNormalizationContext"
+             arguments: [ { groups: [ "user" ] } ]
+      -      method:    "initDenormalizationContext"
+             arguments: [ { groups: [ "user" ] } ]
     tags:      [ { name: "api.resource" } ]
   resource.classifiedadvertisement:
     parent:    "api.resource"
     arguments: [ "Backend\\AdminBundle\\Entity\\ClassifiedAdvertisement" ]
     tags:      [ { name: "api.resource" } ]
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  resource.media:
+    parent:    "api.resource"
+    arguments: [ "Backend\\AdminBundle\\Entity\\Media" ]
+    tags:      [ { name: "api.resource" } ]
+  resource.category:
+    parent:    "api.resource"
+    arguments: [ "Backend\\AdminBundle\\Entity\\Category" ]
+    tags:      [ { name: "api.resource" } ]

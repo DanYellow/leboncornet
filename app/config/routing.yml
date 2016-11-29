@@ -10,3 +10,7 @@ api:
     resource: "."
     type:     "api"
 
+
+api_login_check:
+    path: /api/login_check
+
